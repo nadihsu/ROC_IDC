@@ -1,0 +1,19 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+meta(http-equiv="X-UA-Compatible", content="ie=edge")
+//- 獨立各頁面之標題
+if page.pageTitle
+	title #{page.pageTitle} | #{data.siteTitle}
+else
+	title #{data.siteTitle}
+//- 獨立各頁面之描述
+if page.pageDescription
+	meta(name="description" content= page.pageDescription)
+	meta(itemprop="name" content= data.pageDescription)
+else
+	meta(name="description" content= data.siteDescription)
+	meta(itemprop="name" content= data.siteDescription)
+//- microdata in schema.org
+meta(itemprop="url" content= data.siteUrl)
+//- CANNONICAL
+link(rel="cannonical", href= data.siteUrl)

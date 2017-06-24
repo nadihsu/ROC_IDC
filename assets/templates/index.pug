@@ -1,0 +1,18 @@
+//- Include Layout
+extends ./layouts/_layout-base
+
+//- Page Setting
+block page-data
+  -
+    var page = {
+      pageTitle       : '網站title',
+      pageClassName   : '',
+      pageDescription : ''
+    }
+append site-styles
+append site-scripts
+
+block main
+  //- Code Here
+  .container
+    h2 Hello Peter. Start to Coding...

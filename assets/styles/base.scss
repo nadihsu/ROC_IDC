@@ -1,0 +1,8 @@
+@import "include";
+@import "base/base";
+
+// Skeleton Setting
+.container  {
+  @include container(1024px);
+  @include rhytham(12,24);
+}
